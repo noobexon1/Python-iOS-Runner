@@ -3,6 +3,8 @@ import sys
 import logging
 import colorlog
 
+from config import *
+
 # Configure logging
 handler = colorlog.StreamHandler()
 handler.setFormatter(colorlog.ColoredFormatter(
@@ -86,14 +88,6 @@ def execute_remote_command(client, command):
 
 
 def main():
-    target = '172.21.5.194'  # Your iOS ip address.
-    port = 22  # device's SSH port (default=22).
-    ssh_user = 'root'  # iOS SSH username (should run with root privileges).
-    ssh_pass = 'alpine'  # iOS SSH password.
-    local_script_path = 'runner.py'  # Path to the runner python script.
-    remote_script_path = '/var/mobile/runner.py'  # iOS path to place the runner python script in.
-    remote_python = 'python'  # Command or path to run python on iOS.
-
     # Establish SSH connection with the iOS device
     client = ssh_connect(target, port, ssh_user, ssh_pass)
 
