@@ -17,7 +17,8 @@ It redirects the scripts I/O to your local machine, so it is super comfortable t
   - Transfers **runner.py** to the iOS device via SFTP.
   - Sends a command to the iOS device to execute **runner.py** via the on-device python interpreter.
   - Collect the output and errors (if exists) and logs them on your local machine.
-- **runner.py** is where you come in. Modify it with whatever logic you want.
+  - Cleans up.
+- **runner.py** is where you come in and do your magic. Modify it with whatever logic you want.
 
 ## Usage
 
